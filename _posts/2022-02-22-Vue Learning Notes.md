@@ -74,14 +74,26 @@
 12.  插值表达式： js语法 
     拼接字符串用es6的模板 `$(variable) world`  
  
-13.   监听属性 响应数据的变化 例如每输入一次就检测一次
+13.   监听属性 响应数据的变化 例如每输入一次就检测一次  
 
-        ```    
+**方法格式的监听器**
+
+        ```javascript    
         data:{username:''}
         watch:{
-        username(newVal,oldVal){}
+            username(newVal,oldVal){
                     console.log();
         }
         ```
 
-方法格式的监听器，对象格式的监听器
+**对象格式的监听器**  
+
+        ```javascript
+        data:{username:''}
+        watch:{
+            username:{
+                handler(newVal, oldVal){
+                    
+                }
+        }
+        ```
